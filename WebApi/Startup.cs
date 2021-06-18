@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Practice_UnitTest.Infrastructure.DataAccess;
+using Practice_UnitTest.Infrastructure.Services.CommandServices;
+using Practice_UnitTest.Infrastructure.Services.QueryServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,10 @@ namespace WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
+
+            // Project Service Interfaces
+            services.AddTransient<IDacmeTcgCardCommandService, DacmeTcgCardCommandService>();
+            services.AddTransient<IDacmeTcgCardQueryService, DacmeTcgCardQueryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,11 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationCore\Practice_UnitTest.ApplicationCore.csproj" />
     <ProjectReference Include="..\Infrastructure\Practice_UnitTest.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
