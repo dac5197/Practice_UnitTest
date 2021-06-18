@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Practice_UnitTest.ApplicationCore.Models
 {
-    public class DacmeTcgCardMechanic
+    public class DacmeTcgColor
     {
         [Key]
         public Guid Id { get; set; }
+
         public string Name { get; set; }
-        public string RulesText { get; set; }
+        public string Abbreviation { get; set; }
+        public string ColorHex { get; set; }
     }
 }
